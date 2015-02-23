@@ -13,11 +13,12 @@
 		CABD8BB41A9BAB9B00936ACE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABD8BB31A9BAB9B00936ACE /* Images.xcassets */; };
 		CABD8BB71A9BAB9B00936ACE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD8BB51A9BAB9B00936ACE /* LaunchScreen.xib */; };
 		CABD8BC31A9BAB9B00936ACE /* KJGRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BC21A9BAB9B00936ACE /* KJGRealmTests.swift */; };
-		CABD8BCD1A9BABBD00936ACE /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BCC1A9BABBD00936ACE /* Parent.swift */; };
-		CABD8BCF1A9BABCA00936ACE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABD8BCE1A9BABCA00936ACE /* Realm.framework */; };
-		CABD8BD11A9BABCE00936ACE /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */; };
-		CABD8BD31A9BAC3F00936ACE /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD21A9BAC3F00936ACE /* Child.swift */; };
+		CABD8BCD1A9BABBD00936ACE /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BCC1A9BABBD00936ACE /* Notebook.swift */; };
+		CABD8BD31A9BAC3F00936ACE /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD21A9BAC3F00936ACE /* Cover.swift */; };
 		CABD8BD51A9BAEEF00936ACE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CABD8BD41A9BAEEF00936ACE /* libc++.dylib */; };
+		CABD8BD71A9BAFE000936ACE /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD61A9BAFE000936ACE /* RLMSupport.swift */; };
+		CABD8BD91A9BAFEA00936ACE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABD8BD81A9BAFEA00936ACE /* Realm.framework */; };
+		CABD8BDB1A9BB21400936ACE /* NotebookMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BDA1A9BB21400936ACE /* NotebookMedia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +42,12 @@
 		CABD8BBC1A9BAB9B00936ACE /* KJGRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJGRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABD8BC11A9BAB9B00936ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABD8BC21A9BAB9B00936ACE /* KJGRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KJGRealmTests.swift; sourceTree = "<group>"; };
-		CABD8BCC1A9BABBD00936ACE /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
-		CABD8BCE1A9BABCA00936ACE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
-		CABD8BD21A9BAC3F00936ACE /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		CABD8BCC1A9BABBD00936ACE /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		CABD8BD21A9BAC3F00936ACE /* Cover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
 		CABD8BD41A9BAEEF00936ACE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		CABD8BD61A9BAFE000936ACE /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		CABD8BD81A9BAFEA00936ACE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		CABD8BDA1A9BB21400936ACE /* NotebookMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookMedia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABD8BD91A9BAFEA00936ACE /* Realm.framework in Frameworks */,
 				CABD8BD51A9BAEEF00936ACE /* libc++.dylib in Frameworks */,
-				CABD8BCF1A9BABCA00936ACE /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,15 +92,16 @@
 		CABD8BA91A9BAB9B00936ACE /* KJGRealm */ = {
 			isa = PBXGroup;
 			children = (
-				CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */,
+				CABD8BD61A9BAFE000936ACE /* RLMSupport.swift */,
 				CABD8BAC1A9BAB9B00936ACE /* AppDelegate.swift */,
 				CABD8BAE1A9BAB9B00936ACE /* ViewController.swift */,
 				CABD8BB01A9BAB9B00936ACE /* Main.storyboard */,
 				CABD8BB31A9BAB9B00936ACE /* Images.xcassets */,
 				CABD8BB51A9BAB9B00936ACE /* LaunchScreen.xib */,
 				CABD8BAA1A9BAB9B00936ACE /* Supporting Files */,
-				CABD8BCC1A9BABBD00936ACE /* Parent.swift */,
-				CABD8BD21A9BAC3F00936ACE /* Child.swift */,
+				CABD8BCC1A9BABBD00936ACE /* Notebook.swift */,
+				CABD8BD21A9BAC3F00936ACE /* Cover.swift */,
+				CABD8BDA1A9BB21400936ACE /* NotebookMedia.swift */,
 			);
 			path = KJGRealm;
 			sourceTree = "<group>";
@@ -106,7 +109,7 @@
 		CABD8BAA1A9BAB9B00936ACE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CABD8BCE1A9BABCA00936ACE /* Realm.framework */,
+				CABD8BD81A9BAFEA00936ACE /* Realm.framework */,
 				CABD8BAB1A9BAB9B00936ACE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -230,10 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABD8BAF1A9BAB9B00936ACE /* ViewController.swift in Sources */,
+				CABD8BDB1A9BB21400936ACE /* NotebookMedia.swift in Sources */,
 				CABD8BAD1A9BAB9B00936ACE /* AppDelegate.swift in Sources */,
-				CABD8BCD1A9BABBD00936ACE /* Parent.swift in Sources */,
-				CABD8BD31A9BAC3F00936ACE /* Child.swift in Sources */,
-				CABD8BD11A9BABCE00936ACE /* RLMSupport.swift in Sources */,
+				CABD8BD71A9BAFE000936ACE /* RLMSupport.swift in Sources */,
+				CABD8BCD1A9BABBD00936ACE /* Notebook.swift in Sources */,
+				CABD8BD31A9BAC3F00936ACE /* Cover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

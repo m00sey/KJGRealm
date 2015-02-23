@@ -113,10 +113,10 @@
 
  @return An encrypted `RLMRealm` instance.
  */
-+ (instancetype)encryptedRealmWithPath:(NSString *)path
-                                   key:(NSData *)key
-                              readOnly:(BOOL)readonly
-                                 error:(NSError **)error;
++ (instancetype)realmWithPath:(NSString *)path
+                encryptionKey:(NSData *)key
+                     readOnly:(BOOL)readonly
+                        error:(NSError **)error;
 
 /**
  Set the encryption key to use when opening Realms at a certain path.
@@ -353,6 +353,21 @@ typedef void(^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 - (BOOL)writeCopyToPath:(NSString *)path error:(NSError **)error;
 
 /**
+ Write an encrypted and compacted copy of the RLMRealm to the given path.
+
+ The destination file cannot already exist.
+
+ Note that if this is called from within a write transaction it writes the
+ *current* data, and not data when the last write transaction was committed.
+
+ @param path Path to save the Realm to.
+ @param key 64-byte encryption key to encrypt the new file with
+ @param error On input, a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+ @return YES if the realm was copied successfully. Returns NO if an error occurred.
+*/
+- (BOOL)writeCopyToPath:(NSString *)path encryptionKey:(NSData *)key error:(NSError **)error;
+
+/**
  Invalidate all RLMObjects and RLMResults read from this Realm.
 
  An RLMRealm holds a read lock on the version of the data accessed by it, so
@@ -472,7 +487,7 @@ typedef void (^RLMMigrationBlock)(RLMMigration *migration, NSUInteger oldSchemaV
 
 /**
  Specify a schema version and an associated migration block which is applied when
- opening any Realm with and old schema version.
+ opening the default Realm with an old schema version.
 
  Before you can open an existing `RLMRealm` which has a different on-disk schema
  from the schema defined in your object interfaces you must provide a migration 
@@ -500,7 +515,45 @@ typedef void (^RLMMigrationBlock)(RLMMigration *migration, NSUInteger oldSchemaV
 
  @see               RLMMigration
  */
-+ (void)setSchemaVersion:(NSUInteger)version withMigrationBlock:(RLMMigrationBlock)block;
++ (void)setDefaultRealmSchemaVersion:(NSUInteger)version withMigrationBlock:(RLMMigrationBlock)block;
+
+/**
+ Specify a schema version and an associated migration block which is applied when
+ opening the Realm at realmPath with an old schema version.
+
+ @param version     The current schema version.
+ @param realmPath   The path at which this schema version and migration block is applied.
+ @param block       The block which migrates the Realm to the current version.
+ @return            The error that occurred while applying the migration, if any.
+
+ @see               RLMMigration
+ */
++ (void)setSchemaVersion:(NSUInteger)version forRealmAtPath:(NSString *)realmPath withMigrationBlock:(RLMMigrationBlock)block;
+
+/**
+ Get the schema version for a Realm at a given path.
+
+ @param realmPath   Path to a Realm file
+ @param error       If an error occurs, upon return contains an `NSError` object
+                    that describes the problem. If you are not interested in
+                    possible errors, pass in `NULL`.
+
+ @return            The version of the Realm at `realmPath` or RLMNotVersioned if the version cannot be read.
+ */
++ (NSUInteger)schemaVersionAtPath:(NSString *)realmPath error:(NSError **)error;
+
+/**
+ Get the schema version for an encrypted Realm at a given path.
+
+ @param realmPath   Path to a Realm file
+ @param key         64-byte encryption key.
+ @param error       If an error occurs, upon return contains an `NSError` object
+                    that describes the problem. If you are not interested in
+                    possible errors, pass in `NULL`.
+
+ @return            The version of the Realm at `realmPath` or RLMNotVersioned if the version cannot be read.
+ */
++ (NSUInteger)schemaVersionAtPath:(NSString *)realmPath encryptionKey:(NSData *)key error:(NSError **)error;
 
 /**
  Performs the registered migration block on a Realm at the given path.
@@ -513,7 +566,7 @@ typedef void (^RLMMigrationBlock)(RLMMigration *migration, NSUInteger oldSchemaV
  @return            The error that occurred while applying the migration if any.
 
  @see               RLMMigration
- @see               setSchemaVersion:withMigrationBlock:
+ @see               setSchemaVersion:forRealmAtPath:withMigrationBlock:
  */
 + (NSError *)migrateRealmAtPath:(NSString *)realmPath;
 
@@ -526,7 +579,7 @@ typedef void (^RLMMigrationBlock)(RLMMigration *migration, NSUInteger oldSchemaV
  @param key         64-byte encryption key.
  @return            The error that occurred while applying the migration, if any.
  */
-+ (NSError *)migrateEncryptedRealmAtPath:(NSString *)realmPath key:(NSData *)key;
++ (NSError *)migrateRealmAtPath:(NSString *)realmPath encryptionKey:(NSData *)key;
 
 #pragma mark -
 

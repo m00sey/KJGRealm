@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RLMArray.h</key>
 		<data>
-		/231EbDLds9zSjQB6w5JTaG70co=
+		C/VnGH7XyDM0Z5xXoFDkoBDne18=
 		</data>
 		<key>Headers/RLMCollection.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/RLMConstants.h</key>
 		<data>
-		6iQqbNQblJjuAT39eDj/vg4LrrM=
+		Syz+0q+cOPMMt6GDdeG41gEAp3A=
 		</data>
 		<key>Headers/RLMMigration.h</key>
 		<data>
@@ -22,7 +22,11 @@
 		</data>
 		<key>Headers/RLMObject.h</key>
 		<data>
-		TQK/G9B5wbJFdkH4gtBdKLOR1Gc=
+		EPul6yzWTHZEtNmBON6d6Pvk9hQ=
+		</data>
+		<key>Headers/RLMObjectBase.h</key>
+		<data>
+		MlV0yNZz4v2Y7zL1LJgpdk6KlLo=
 		</data>
 		<key>Headers/RLMObjectSchema.h</key>
 		<data>
@@ -34,11 +38,11 @@
 		</data>
 		<key>Headers/RLMProperty.h</key>
 		<data>
-		qdU04P0YDfIiph+veXI05JIfIMw=
+		MulYeNSWXLFliPuPLn3/MRgLIO8=
 		</data>
 		<key>Headers/RLMRealm.h</key>
 		<data>
-		0HaSlRZjy3Kw2hUM79c+QJiTHek=
+		LqNjn6zZPGp3KcSl4bEO7kyPEj4=
 		</data>
 		<key>Headers/RLMResults.h</key>
 		<data>
@@ -48,17 +52,13 @@
 		<data>
 		0RwIZeBQnS5yQ/7cvRQCwcf8ybA=
 		</data>
-		<key>Headers/RLMSwiftHelpers.h</key>
-		<data>
-		bdreetfQwLcv8QrbqC0QMYZd6yI=
-		</data>
 		<key>Headers/Realm.h</key>
 		<data>
-		tZU8LJJlNH0/rYh1UA3c4tm2DMw=
+		FmzyzjewSldaJ9OyrT+1zd1YX18=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VSIp+FIuvgs2vNXwT3R9ud9mcGQ=
+		C0X1WLFVvaI0N9ViifgesGGmomk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,7 +69,7 @@
 	<dict>
 		<key>Headers/RLMArray.h</key>
 		<data>
-		/231EbDLds9zSjQB6w5JTaG70co=
+		C/VnGH7XyDM0Z5xXoFDkoBDne18=
 		</data>
 		<key>Headers/RLMCollection.h</key>
 		<data>
@@ -77,7 +77,7 @@
 		</data>
 		<key>Headers/RLMConstants.h</key>
 		<data>
-		6iQqbNQblJjuAT39eDj/vg4LrrM=
+		Syz+0q+cOPMMt6GDdeG41gEAp3A=
 		</data>
 		<key>Headers/RLMMigration.h</key>
 		<data>
@@ -85,7 +85,11 @@
 		</data>
 		<key>Headers/RLMObject.h</key>
 		<data>
-		TQK/G9B5wbJFdkH4gtBdKLOR1Gc=
+		EPul6yzWTHZEtNmBON6d6Pvk9hQ=
+		</data>
+		<key>Headers/RLMObjectBase.h</key>
+		<data>
+		MlV0yNZz4v2Y7zL1LJgpdk6KlLo=
 		</data>
 		<key>Headers/RLMObjectSchema.h</key>
 		<data>
@@ -97,11 +101,11 @@
 		</data>
 		<key>Headers/RLMProperty.h</key>
 		<data>
-		qdU04P0YDfIiph+veXI05JIfIMw=
+		MulYeNSWXLFliPuPLn3/MRgLIO8=
 		</data>
 		<key>Headers/RLMRealm.h</key>
 		<data>
-		0HaSlRZjy3Kw2hUM79c+QJiTHek=
+		LqNjn6zZPGp3KcSl4bEO7kyPEj4=
 		</data>
 		<key>Headers/RLMResults.h</key>
 		<data>
@@ -111,13 +115,9 @@
 		<data>
 		0RwIZeBQnS5yQ/7cvRQCwcf8ybA=
 		</data>
-		<key>Headers/RLMSwiftHelpers.h</key>
-		<data>
-		bdreetfQwLcv8QrbqC0QMYZd6yI=
-		</data>
 		<key>Headers/Realm.h</key>
 		<data>
-		tZU8LJJlNH0/rYh1UA3c4tm2DMw=
+		FmzyzjewSldaJ9OyrT+1zd1YX18=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
