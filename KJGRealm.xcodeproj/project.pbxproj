@@ -13,6 +13,11 @@
 		CABD8BB41A9BAB9B00936ACE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABD8BB31A9BAB9B00936ACE /* Images.xcassets */; };
 		CABD8BB71A9BAB9B00936ACE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD8BB51A9BAB9B00936ACE /* LaunchScreen.xib */; };
 		CABD8BC31A9BAB9B00936ACE /* KJGRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BC21A9BAB9B00936ACE /* KJGRealmTests.swift */; };
+		CABD8BCD1A9BABBD00936ACE /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BCC1A9BABBD00936ACE /* Parent.swift */; };
+		CABD8BCF1A9BABCA00936ACE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABD8BCE1A9BABCA00936ACE /* Realm.framework */; };
+		CABD8BD11A9BABCE00936ACE /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */; };
+		CABD8BD31A9BAC3F00936ACE /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD8BD21A9BAC3F00936ACE /* Child.swift */; };
+		CABD8BD51A9BAEEF00936ACE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CABD8BD41A9BAEEF00936ACE /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		CABD8BBC1A9BAB9B00936ACE /* KJGRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJGRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABD8BC11A9BAB9B00936ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABD8BC21A9BAB9B00936ACE /* KJGRealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KJGRealmTests.swift; sourceTree = "<group>"; };
+		CABD8BCC1A9BABBD00936ACE /* Parent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		CABD8BCE1A9BABCA00936ACE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		CABD8BD21A9BAC3F00936ACE /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		CABD8BD41A9BAEEF00936ACE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABD8BD51A9BAEEF00936ACE /* libc++.dylib in Frameworks */,
+				CABD8BCF1A9BABCA00936ACE /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,7 @@
 		CABD8B9E1A9BAB9B00936ACE = {
 			isa = PBXGroup;
 			children = (
+				CABD8BD41A9BAEEF00936ACE /* libc++.dylib */,
 				CABD8BA91A9BAB9B00936ACE /* KJGRealm */,
 				CABD8BBF1A9BAB9B00936ACE /* KJGRealmTests */,
 				CABD8BA81A9BAB9B00936ACE /* Products */,
@@ -77,12 +90,15 @@
 		CABD8BA91A9BAB9B00936ACE /* KJGRealm */ = {
 			isa = PBXGroup;
 			children = (
+				CABD8BD01A9BABCE00936ACE /* RLMSupport.swift */,
 				CABD8BAC1A9BAB9B00936ACE /* AppDelegate.swift */,
 				CABD8BAE1A9BAB9B00936ACE /* ViewController.swift */,
 				CABD8BB01A9BAB9B00936ACE /* Main.storyboard */,
 				CABD8BB31A9BAB9B00936ACE /* Images.xcassets */,
 				CABD8BB51A9BAB9B00936ACE /* LaunchScreen.xib */,
 				CABD8BAA1A9BAB9B00936ACE /* Supporting Files */,
+				CABD8BCC1A9BABBD00936ACE /* Parent.swift */,
+				CABD8BD21A9BAC3F00936ACE /* Child.swift */,
 			);
 			path = KJGRealm;
 			sourceTree = "<group>";
@@ -90,6 +106,7 @@
 		CABD8BAA1A9BAB9B00936ACE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CABD8BCE1A9BABCA00936ACE /* Realm.framework */,
 				CABD8BAB1A9BAB9B00936ACE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -214,6 +231,9 @@
 			files = (
 				CABD8BAF1A9BAB9B00936ACE /* ViewController.swift in Sources */,
 				CABD8BAD1A9BAB9B00936ACE /* AppDelegate.swift in Sources */,
+				CABD8BCD1A9BABBD00936ACE /* Parent.swift in Sources */,
+				CABD8BD31A9BAC3F00936ACE /* Child.swift in Sources */,
+				CABD8BD11A9BABCE00936ACE /* RLMSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KJGRealm",
+				);
 				INFOPLIST_FILE = KJGRealm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KJGRealm",
+				);
 				INFOPLIST_FILE = KJGRealm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

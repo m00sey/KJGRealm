@@ -7,19 +7,26 @@
 //
 
 import UIKit
+import Realm
 
 class ViewController: UIViewController {
 
+    let response:[String:AnyObject] = ["name":"Kevin", "child":["name":"basil", "age": 10]]
+    let realm:RLMRealm = RLMRealm.defaultRealm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        println(RLMRealm.defaultRealm().path)
+        
+        realm.beginWriteTransaction()
+        realm.addOrUpdateObject(Parent(response: response))
+        realm.commitWriteTransaction()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
